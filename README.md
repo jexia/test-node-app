@@ -1,3 +1,3 @@
-# Jexia Test Node.JS Application
+# Node.JS "Hello World" Application for testing Jexia Application Hosting
 
-This application meets (minimal) requirements to get deployed
+This is a "Hello World" application that meets (minimal) requirements to get deployed on Jexia application hosting.
