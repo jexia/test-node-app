@@ -1,5 +1,5 @@
 # Node.JS "Hello World" Application for testing Jexia Application Hosting
 
-[![Runme](https://runme.io/static/button.svg)](https://runme.io/runme?repo_url=https://github.com/jexia/test-node-app.git&repo_branch=runme-dockerimage&docker_image=velp/test-node-app:latest)
+[![Runme](https://runme.io/static/button.svg)](https://runme.io/run?app_id=bdc5de8f-58ea-4840-8ec5-52ad0572177d)
 
 This is a "Hello World" application that meets (minimal) requirements to get deployed on Jexia application hosting.
