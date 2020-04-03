@@ -15,8 +15,9 @@ const credentials = {
 jexiaSDK.jexiaClient().init( credentials,dataModule);
 const todo = dataModule.dataset(process.env.DATASET);
 
-// to deploy it to AppHosting please use port 80
-const PORT = 3000; 
+// if you want to run locally change port to 3000
+// for Apphosting use port 80
+const PORT = 80; 
 
 // to deploy it to AppHosting please use IP:0.0.0.0
 const HOST = '0.0.0.0';
