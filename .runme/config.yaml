@@ -3,7 +3,7 @@ publish: app
 services:
   mongo:
     image: mongo:4.0
-    command: >
+    args: >
       /bin/bash -c "
         set -m
         mongod --bind_ip 0.0.0.0 --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1 &
