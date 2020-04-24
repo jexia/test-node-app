@@ -3,19 +3,7 @@ publish: app
 services:
   mongo:
     image: mongo:4.0
-    command: ["/bin/bash", "-c"]
-    args: ["set -m;
-            mongod --bind_ip 0.0.0.0 --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1 &
-            for i in {1..30}; do
-              mongo rocketchat --eval \"rs.initiate({_id:'rs0',members:[{_id:0,host:'localhost:27017'}]})\" &&
-              s=$$? && break || s=$$?;
-              echo \"Tried $$i times. Waiting 5 secs...\";
-              sleep 5;
-            done;
-            if [ $$s -ne 0 ]; then
-              (exit $$s);
-            fi;
-            fg %1"]
+    command: ["/bin/bash", "-c", "set -m; mongod --bind_ip 0.0.0.0 --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1 & for i in {1..30}; do mongo rocketchat --eval \"rs.initiate({_id:'rs0',members:[{_id:0,host:'localhost:27017'}]})\" && s=$$? && break || s=$$?; echo \"Tried $$i times. Waiting 5 secs...\"; sleep 5; done; if [ $$s -ne 0 ]; then (exit $$s); fi; fg %1"]
     volumes:
     - name: data
       mount: /data/db
