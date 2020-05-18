@@ -12,6 +12,7 @@ services:
     build:
       type: dockerfile
       config: ./.runme/Dockerfile
+    command: npm run start
     environment:
       KEY1: VALUE1
       KEY2: VALUE2
