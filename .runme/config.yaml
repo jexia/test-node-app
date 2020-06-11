@@ -1,0 +1,8 @@
+version: 1.0
+publish: app
+services:
+  app:
+    image: velp/test-node-app:latest
+    ports:
+    - container: 80
+      public: 80
